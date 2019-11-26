@@ -1,5 +1,5 @@
 // import $ from "jquery";
-import "../css/style.css";
+import "./scss/base.scss";
 
 $(".title").text("Some Text!!!");
 

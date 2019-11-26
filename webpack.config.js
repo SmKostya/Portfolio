@@ -1,5 +1,6 @@
 let path = require("path");
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
+let HtmlWebpackPlugin = require("html-webpack-plugin");
 
 let conf = {
     entry: "./src/index.js",
@@ -18,10 +19,12 @@ let conf = {
                 loader: "babel-loader",
             },
             {
-                test: /\.css$/,
-                use: [ "style-loader",
-                     "css-loader"
-                ]
+                test: /\.s[ac]ss$/i,
+                use: [
+                  'style-loader',
+                  'css-loader',
+                  'sass-loader',
+                ],
             },
             {
                 test: /\.pug$/,
@@ -31,7 +34,12 @@ let conf = {
                 }
             }
         ]
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.pug"
+          }),
+    ],
 };
 
 module.exports = (env, options) => {
