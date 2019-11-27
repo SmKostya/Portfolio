@@ -1,0 +1,44 @@
+$link-color: #561ab7;
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:#bbb; 
+    font-size: 15px; 
+    font-weight: bold;
+
+    header{
+        padding-top: 20px;
+        width: 100%;
+        height: 50px;
+        background: linear-gradient(#c2e59c, #64b3f4);
+        text-align: center;
+        justify-content: center;
+        
+        ul{
+            text-align: center;
+        }
+
+        li{
+            padding: 0 16px;
+            color: $link-color;
+            display: inline;
+            list-style: none;
+            a{
+                font-size: 20px;
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+            a:visited{
+                color: $link-color;
+            }
+        }
+
+    }
+    main{
+        margin-top: 100px;
+        text-align: center;
+    }
+}
