@@ -2,10 +2,11 @@ let path = require("path");
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
 let merge = require("webpack-merge");
-let pug = require("./webpack/pug.js");
-let bable = require("./webpack/bable.js");
-let devserver = require("./webpack/devserver.js");
-let scss = require("./webpack/scss.js");
+let pug = require("./webpack/pug");
+let bable = require("./webpack/bable");
+let devserver = require("./webpack/devserver");
+let scss = require("./webpack/scss");
+let ExtractCSS = require("./webpack/css.extract");
 
 let conf = merge([
     {
