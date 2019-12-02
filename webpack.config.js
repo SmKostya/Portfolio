@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+
+
 let path = require("path");
 let ExtractTextPlugin = require("extract-text-webpack-plugin");
 let HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -7,16 +10,18 @@ let bable = require("./webpack/bable");
 let devserver = require("./webpack/devserver");
 let scss = require("./webpack/scss");
 let ExtractCSS = require("./webpack/css.extract");
+let images = require("./webpack/images");
+
 
 let conf = merge([
     {
         entry: {
-            "index": "./src/pages/index/index.js",
-            "contact": "./src/pages/contact/contact.js"
+            "index": "./src/index.js",
         },
         output: {
             path: path.resolve(__dirname, "./dist"),
-            filename: "[name].js",
+            // publicPath: 'http://localhost:8080/',
+            filename: "main.js",
         },
         
         module: {
@@ -30,12 +35,7 @@ let conf = merge([
             new HtmlWebpackPlugin({
                 filename: "index.html",
                 chunks: ["index"],
-                template: "./src/pages/index/index.pug"
-            }),
-            new HtmlWebpackPlugin({
-                filename: "contact.html",
-                chunks: ["contact"],
-                template: "./src/pages/contact/contact.pug"
+                template: "./src/index.pug"
             }),
         ], 
     },
@@ -43,6 +43,7 @@ let conf = merge([
     bable(),
     pug(),
     scss(),
+    images(),
 ]);
 
 module.exports = (env, options) => {

@@ -7,21 +7,65 @@
     <title>Study app</title>
   </head>
   <body>
-    <header>
-      <ul> 
-        <li> <a href="index.html"> About Me</a></li>
-        <li> <a href="contact.html">Contacts</a></li>
-        <li> <a href="porfolio.html">My Works</a></li>
-      </ul>
+    <header> 
+      <div class="header">
+        <div>
+          <span> Hello, my name is Kostya Smirnov.</span> <br> My dream/goal in life is to become a 
+          professional frontend developer. This is my portfolio site.
+        </div>
+        <div class="button">View my work <span class="arrow"><span> ➔</div>
+      </div>
     </header>
     <main>
-      <p>Welcome block </p>
-      <div>My works</div>
+      <div class="aboutMe">
+        <div class="welcome">
+          <h2>Technologies that i use:</h2>
+          <ul>
+            <li>HTML5 + CSS3</li>
+            <li>SCSS</li>
+            <li>Pug</li>
+            <li>JavaScript + jquery</li>
+            <li>Github</li>
+            <li>WebPack</li>
+          </ul>
+        </div>
+      </div>
+      <div class="works"> 
+        <h3>Completed projects</h3>
+        <div class="projects">
+          <div><a href="#"> 
+              <div class="name">Photographer portfolio</div></a><img src="./img/Photographer_Portfolio.jpg" alt="Photographer site portfolio"></div>
+          <div><a href="#"> 
+              <div class="name">Photographer portfolio</div></a><img src="./img/Photographer_Portfolio.jpg" alt="Photographer site portfolio"></div>
+        </div>
+      </div>
+      <div class="works"> 
+        <h3>Projects  in development</h3>
+        <div class="projects">
+          <div><a href="#"> 
+              <div class="name">Site portfolio for photographer</div></a><img src="./img/no_image_available.jpg" alt="Photographer site portfolio"></div>
+        </div>
+      </div>
+      <div class="works"> 
+        <ul>Future projects:
+          <li>Online store 
+            <ul>What should be on the site: 
+              <li>Browse by category</li>
+              <li>Filtration by price, date, etc.</li>
+              <li>Admin panel</li>
+              <li>The ability to conveniently push products by category</li>
+              <li>Feedback form</li>
+            </ul>
+          </li>
+          <li>Site portfolio for photographer</li>
+        </ul>
+      </div>
     </main>
+    <div id="scrollPage"></div>
     <footer>
-      <div>   
-        <h1>Home page</h1>
+      <div class="footer"><span class="icon telegram"></span><span class="icon facebook"></span><span class="icon github"></span>
+        <div class="scrollTop">   <span>UP!  </span></div>
       </div>
     </footer>
-  <script type="text/javascript" src="index.js"></script></body>
+  <script type="text/javascript" src="main.js"></script></body>
 </html>
