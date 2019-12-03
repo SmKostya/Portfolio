@@ -14,56 +14,80 @@ html(lang="en")
                 div(class="button") View my work <span class="arrow"><span> ➔
 
         main
-            div(class="aboutMe")
-                div(class="welcome")
-                    h2 Technologies that i use:
-                    ul
-                        li HTML5 + CSS3
-                        li SCSS
-                        li Pug
-                        li JavaScript + jquery
-                        li Github
-                        li WebPack
-                
-            div(class="works") 
-                h3 Completed projects
-                div(class="projects")
-                    div
-                        a(href="#") 
-                            div(class="name") Photographer portfolio
-                        img(src=("./img/Photographer_Portfolio.jpg"), alt="Photographer site portfolio")
+            div(class="Technologies")
+                h2 Technologies that i use:
+                ul
+                    li HTML5 + CSS3
+                    li SCSS
+                    li Pug
+                    li JavaScript + jquery
+                    li Github
+                    li WebPack
+                    li Figma
+
+            //- hr(class="line1")     
+            h2 Complited projects:       
+            div(class="complitedProjects")
+                div
+                    span(class="name") Photographer portfolio
+                    div(class="project")
+                        div(class="image")
+                            img(src=("./src/img/Photographer_Portfolio_2.jpg"), alt="Photographer site portfolio")
+                        div(class="taskList")
+                            ol Task List: 
+                                li Pages: home, contact and portfolio
+                                li Slider in start window
+                                li Convenient viewing of photo shoot albums
+                                li Contact form
+                                li Links to social
+                    div(class="button")
+                        a(href="#", class="Open_site")
+                            div Open site
                             
-                    div
-                        a(href="#") 
-                            div(class="name") Photographer portfolio
-                        img(src=("./img/Photographer_Portfolio.jpg"), alt="Photographer site portfolio")
-                    //- a(href="#") 
-                    //-     div(class="name") Photographer portfolio()
-                    //- img(src=("./src/img/Photographer_Portfolio.jpg"), alt="Photographer site portfolio")
+                        a(href="#", class="github_button") 
+                            div GitHub
+                hr(class="line")
+                div
+                    span(class="name") Web StartUp
+                    div(class="project")
+                        div(class="image")
+                            img(src=("./src/img/Photographer_Portfolio.jpg"), alt="Photographer site portfolio")
+                        div(class="taskList")
+                            ol Task List: 
+                                li Pages: home, contact and portfolio
+                                li Slider in start window
+                                li Convenient viewing of photo shoot albums
+                                li Contact form
+                                li Links to social
+                    div(class="button")
+                        a(href="#", class="Open_site")
+                            div Open site
+                            
+                        a(href="#", class="github_button") 
+                            div GitHub
+                        
+                        
+                    
+            //- hr(class="line")  
 
-
-            
+            //- div(class="inDevelopment") 
+            //-     h2 Projects  in development:
+            //-     div(class="projects")
+            //-         span(class="icon github")
+            //-         div(class="name") Site portfolio for photographer
+                        
                 
 
-            div(class="works") 
-                h3 Projects  in development
-                div(class="projects")
-                    div
-                        a(href="#") 
-                            div(class="name") Site portfolio for photographer
-                        img(src=("./img/no_image_available.jpg"), alt="Photographer site portfolio")
-                
-
-            div(class="works") 
-                ul Future projects:
-                    li Online store 
-                        ul What should be on the site: 
-                            li Browse by category
-                            li Filtration by price, date, etc.
-                            li Admin panel
-                            li The ability to conveniently push products by category
-                            li Feedback form
-                    li Site portfolio for photographer
+            //- div(class="Future_ideas") 
+            //-     ul 
+            //-         h3 Future projects:
+            //-         li Online store 
+            //-             ul What should be on the site: 
+            //-                 li Browse by category
+            //-                 li Filtration by price, date, etc.
+            //-                 li Admin panel
+            //-                 li The ability to conveniently push products by category
+            //-                 li Feedback form
 
 
         div(id="scrollPage")
