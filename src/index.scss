@@ -380,7 +380,7 @@ footer {
     filter: invert(100%);
     >div {
         width: max-content;
-        background-color: rgba(197, 197, 204, 0.9);
+        background-color: rgba(197, 197, 204, 1);
         display: flex;
         padding: 16px 16px 0 16px;
         border-top-left-radius: 250px;
@@ -424,4 +424,14 @@ $IconSizeMultiplier: 1.4;
 
 .github {
     background-position: calc(-115px * #{$IconSizeMultiplier}) calc(-206px * #{$IconSizeMultiplier});
+}
+
+
+
+
+.line_bottom{
+    filter: invert(100%);
+    background-color: rgba(197, 197, 204, 1);
+    // width: calc(100% - 267px);
+    height: 10px;
 }

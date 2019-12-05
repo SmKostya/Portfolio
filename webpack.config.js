@@ -9,6 +9,7 @@ let pug = require("./webpack/pug");
 let bable = require("./webpack/bable");
 let devserver = require("./webpack/devserver");
 let scss = require("./webpack/scss");
+let css = require("./webpack/css");
 let ExtractCSS = require("./webpack/css.extract");
 let images = require("./webpack/images");
 
@@ -44,6 +45,7 @@ let conf = merge([
     pug(),
     scss(),
     images(),
+    css(),
 ]);
 
 module.exports = (env, options) => {

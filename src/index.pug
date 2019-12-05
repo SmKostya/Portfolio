@@ -7,14 +7,14 @@ html(lang="en")
         title Study app
     body
         header 
-            div(class="header")
+            .header
                 div. 
                     <span> Hello, my name is Kostya Smirnov.</span> <br> My dream/goal in life is to become a 
                     professional frontend developer. This is my portfolio site.
-                div(class="button") View my work <span class="arrow"><span> ➔
+                .button View my work <span class="arrow"><span> ➔
 
         main
-            div(class="Technologies")
+            .Technologies
                 h2 Technologies that i use:
                 ul
                     li HTML5 + CSS3
@@ -25,82 +25,48 @@ html(lang="en")
                     li WebPack
                     li Figma
 
-            //- hr(class="line1")     
+            mixin block_project(name, imgSrc, taskList, href_site="#", href_github="#")
+                div
+                    span.name= name
+                    .project
+                        .image
+                            img(src=imgSrc, alt="Photographer site portfolio")
+                        .taskList
+                            ol Task List: 
+                                each task in taskList
+                                    li= task
+
+                    .button
+                        a(href= href_site, class="Open_site")
+                            div Open site
+                            
+                        a(href= href_github, class="github_button") 
+                            div GitHub
+            
             h2 Complited projects:       
-            div(class="complitedProjects")
-                div
-                    span(class="name") Photographer portfolio
-                    div(class="project")
-                        div(class="image")
-                            img(src=("./src/img/Photographer_Portfolio_2.jpg"), alt="Photographer site portfolio")
-                        div(class="taskList")
-                            ol Task List: 
-                                li Pages: home, contact and portfolio
-                                li Slider in start window
-                                li Convenient viewing of photo shoot albums
-                                li Contact form
-                                li Links to social
-                    div(class="button")
-                        a(href="#", class="Open_site")
-                            div Open site
-                            
-                        a(href="#", class="github_button") 
-                            div GitHub
-                hr(class="line")
-                div
-                    span(class="name") Web StartUp
-                    div(class="project")
-                        div(class="image")
-                            img(src=("./src/img/Photographer_Portfolio.jpg"), alt="Photographer site portfolio")
-                        div(class="taskList")
-                            ol Task List: 
-                                li Pages: home, contact and portfolio
-                                li Slider in start window
-                                li Convenient viewing of photo shoot albums
-                                li Contact form
-                                li Links to social
-                    div(class="button")
-                        a(href="#", class="Open_site")
-                            div Open site
-                            
-                        a(href="#", class="github_button") 
-                            div GitHub
-                        
-                        
-                    
-            //- hr(class="line")  
-
-            //- div(class="inDevelopment") 
-            //-     h2 Projects  in development:
-            //-     div(class="projects")
-            //-         span(class="icon github")
-            //-         div(class="name") Site portfolio for photographer
-                        
+            .complitedProjects
+                +block_project("Photographer portfolio", "./src/img/Photographer_Portfolio_2.jpg",["Pages: home, contact and portfolio",
+                "Slider in start window", "Convenient viewing of photo shoot albums", "Contact form", "Links to social"])
+               
+                hr.line
                 
-
-            //- div(class="Future_ideas") 
-            //-     ul 
-            //-         h3 Future projects:
-            //-         li Online store 
-            //-             ul What should be on the site: 
-            //-                 li Browse by category
-            //-                 li Filtration by price, date, etc.
-            //-                 li Admin panel
-            //-                 li The ability to conveniently push products by category
-            //-                 li Feedback form
-
-
-        div(id="scrollPage")
+                +block_project("Web StartUp", "./src/img/Photographer_Portfolio.jpg",["Pages: home, contact and portfolio",
+                "Slider in start window", "Convenient viewing of photo shoot albums", "Contact form", "Links to social"])
+               
+                        
+        .line_bottom 
 
         footer
 
-            div(class="footer")
-                span(class="icon telegram")
-                span(class="icon facebook")
-                span(class="icon github")
-                div(class="scrollTop")    
+            .footer
+                span.icon.telegram
+                span.icon.facebook
+                span.icon.github
+                .scrollTop   
                     span UP!  
+
                 
 
         
                 
+

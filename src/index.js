@@ -1,5 +1,8 @@
 /*jshint esversion: 6 */
+
+
 import "./index.scss";
+import 'normalize.css';
 let footer = document.getElementsByTagName('footer')[0];
 let scrollTopButton = document.getElementsByClassName("scrollTop")[0];
 
